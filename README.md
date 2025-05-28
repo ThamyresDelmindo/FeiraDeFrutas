@@ -1,6 +1,7 @@
 # Feira de Frutas 🥭🍎
 
-Este é um projeto simples em Python para praticar listas, condicionais e interação com o usuário. O # objetivo é simular uma feira de frutas com opções de escolha e ações básicas.
+Este é um projeto simples em Python para praticar listas, condicionais e interação com o usuário. 
+O objetivo é simular uma feira de frutas com opções de escolha e ações básicas.
 
 ## Como executar
 
