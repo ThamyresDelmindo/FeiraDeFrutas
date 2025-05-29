@@ -31,51 +31,67 @@
 
 
 frutas = ["Laranja", "Manga", "Banana", "Uva", "Goiaba"]
+
 while True:
+    print("🍑" * 20)
     print("\n🍊 MENU DA FEIRA🍇")
+    print()
+    print("🍑" * 20)
     print("1 - Ver todas as frutas")
     print("2 - Adicionar uma fruta")
     print("3 - Remover uma fruta")
     print("4 - Verificar se uma fruta está na feira")
     print("5 - Mostrar quantas frutas tem na feira")
-    print("6 - Mostras a lista completa da feira")
+    print("6 - Mostrar a lista completa da feira")
     print("7 - Sair do programa")
+    print("🍑" * 20)
 
-    opcao = input("Escolha uma opção (1 a 7): ")
+    opcao = input("\nEscolha uma opção de 1 a 7: ")
+    print("🍑" * 20)
 
     if opcao == "1":
-        print("\nAs frutas que temos disponíveis hoje são:")
+        print("\n😀 As frutas que temos disponíveis hoje são:")
         for fruta in frutas:
-            print("-", fruta)
+            print("\n👉", fruta)
+        input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
 
+            
     elif opcao == "2":
-        nova_fruta = input("Digite o nome da fruta que deseja adicionar: ")
+        nova_fruta = input("\n😀 Digite o nome da fruta que deseja adicionar: ")
         frutas.append(nova_fruta)
-        print(f"{nova_fruta} foi adicionada à feira!")
+        print(f"{nova_fruta} agora está na feira! 😀")
+        input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
 
     elif opcao == "3":
-        remover_fruta = input("Digite o nome da fruta que deseja remover: ")
+        remover_fruta = input("\n🥺 Digite o nome da fruta que deseja remover: ")
         if remover_fruta in frutas:
             frutas.remove(remover_fruta)
-            print(f"{remover_fruta} foi removida da feira.")
+            print(f"{remover_fruta} não está mais na feira. 🥺")
+            input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
         else: 
-            print(f"{remover_fruta} não está na feira")
+            print(f"{remover_fruta} não está na feira. 👻")
+            input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
 
     elif opcao == "4":
-        fruta_verificar = input("Digite o nome da fruta que deseja procurar: ")
+        fruta_verificar = input("😀 Digite o nome da fruta que deseja procurar: ")
         if fruta_verificar in frutas:
-            print("Temos no menu!")
+            print("Temos no menu! 😀")
+            input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
         else:
-            print("Não temos no momento, mas pode procurar outra fruta.")   
+            print("Não temos no momento, mas pode pesquisar outra fruta. 👻") 
+            input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")  
 
     elif opcao == "5":
-        print(f"No momento temos {len(frutas)} frutas na feira.")
+        print(f"No momento temos {len(frutas)} frutas na feira. 😀")
+        input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
 
     elif opcao == "6":
-        print("Lista completa:", frutas)
+        print("😀 Lista completa de frutas disponíveis:", ", ".join(frutas))
+        input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
 
     elif opcao == "7":
-        print("Programa encerrado. Volte sempre à nossa feira!")
+        print("😀 Programa encerrado. Volte sempre à nossa feira!")
         break
     else:
-        print("Opção inválida. Tente novamente.")    
+        print("Opção inválida. Tente novamente.👻")
+        input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")    
