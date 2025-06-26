@@ -97,7 +97,7 @@ while True:
     elif opcao == "2":
         nova_fruta = input("\n😀 Digite o nome da fruta que deseja adicionar: ")
         frutas.append(nova_fruta)
-        log.info(f"{nome} adicionou {nova_fruta}")
+        log.info(f"{nome} escolheu a opção 2 - Adicionou {nova_fruta}")
         print(f"{nova_fruta} agora está na feira! 😀")
         input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
 
@@ -105,22 +105,22 @@ while True:
         remover_fruta = input("\n🥺 Digite o nome da fruta que deseja remover: ")
         if remover_fruta in frutas:
             frutas.remove(remover_fruta)
-            log.info(f"{nome} removeu {remover_fruta}")
+            log.info(f"{nome} escolheu a opção 3 - Removeu {remover_fruta}")
             print(f"{remover_fruta} não está mais na feira. 🥺")
             input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
         else: 
+            log.info(f"{nome} escolheu a opção 3 - Tentou remover {remover_fruta} mas não está na feira")
             print(f"{remover_fruta} não está na feira. 👻")
-            log.info(f"{nome} tentou remover {remover_fruta}")
             input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
 
     elif opcao == "4":
         fruta_verificar = input("😀 Digite o nome da fruta que deseja procurar: ")
         if fruta_verificar in frutas:
-            log.info(f"{nome} procurou {fruta_verificar} e encontrou")
+            log.info(f"{nome} escolheu a opção 4 - Procurou {fruta_verificar} e encontrou")
             print("Temos no menu! 😀")
             input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")
         else:
-            log.info(f"{nome} procurou {fruta_verificar} e não encontrou")
+            log.info(f"{nome} escolheu a opção 4 - Procurou {fruta_verificar} e não encontrou")
             print("Não temos no momento, mas pode pesquisar outra fruta. 👻") 
             input("\n🔁 Pressione ENTER para voltar ao menu e escolher outra opção")  
 
