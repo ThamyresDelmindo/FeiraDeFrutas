@@ -33,16 +33,57 @@ import logging
 import os
 from logging import handlers
 
-os.makedirs("logs", exist_ok=True)
+os.makedirs("logs", exist_ok=True) #Confirmando a criação da pasta de logs caso ela não exista 
+
+#TODO: Ver se posso mudar o nome da pasta de "logs" para "histórico" 
+#TODO: Colocar os nomes existentes em ordem alfabética e uma contagem de quantos nomes estão em uso
 
 print("Seja bem vindo(a) ao Menu Feira de Frutas.")
 print()
 print("Escolha um nome de cliente.")
 print()
-print(f"Use somente letras. ".upper() +   "Ex: JoanaSantos, CarlosLima, AnaEstela")
+print("Esses são os nomes que já estão em uso. Evite repeti-los.")
+
+try:
+    nomes_em_uso = os.listdir("logs")
+except FileNotFoundError as e:
+    print(f"{str(e)}.") #rever o que isso quer dizer
+    sys.exit(1) #Ver se precisa desse negócio de sys.exit
+
+for nomes in nomes_em_uso:
+    nomes_usados = os.path.splitext(nomes)
+    print(nomes_usados[0])
+
 print()
 
-nome = input("Digite seu nome de cliente: ")
+while True:
+    nome = input("Digite seu nome de cliente: ").strip() #Esse strip remove espaços em branco no início e no fim da palavra
+
+    if nome == "exit":
+        print("Encerrando o programa")
+        break
+    elif nome == "":
+        print("Você precisa digitar um nome para continuar. Para encerrar o programa a qualquer momento, digite 'exit'.")
+        continue
+    elif os.path.exists(f"logs/{nome}.log"):
+        confirma_nome_existente = input(
+            f"{nome} já está em uso. Digite: \n" 
+            "1 - para tentar outro nome\n"
+            "2 - para continuar com o nome escolhido\n"
+            "Exit - para encerrar o programa\n"    
+        ).strip()
+        if confirma_nome_existente == "exit":
+            print("Encerrando o programa")
+            break
+        if confirma_nome_existente == "1":
+            continue
+        if confirma_nome_existente == "2":
+            break
+    else:
+        break
+
+#TODO: Quando dou exit, o sistema encerra o While True inicial e vai para o While True do menu da loja.
+#e considera o nome que coloquei, mesmo que seja um nome já existente
 
 log_level = getattr(logging, os.getenv("LOG_LEVEL", "INFO").upper())
 log = logging.getLogger(nome)
