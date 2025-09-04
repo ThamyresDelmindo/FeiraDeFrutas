@@ -1,0 +1,134 @@
+body.landing {
+    background-color: black;
+    display: flex;
+    flex-direction: column;              /* ativa flexbox */
+    justify-content: center;    /* centraliza na horizontal */
+    align-items: center;        /* centraliza na vertical */
+    height: 100vh;              /* ocupa altura total da tela */
+    margin: 0;                  /* remove margens padrão */
+    color: white;               /* deixa o texto visível no fundo preto */
+    background-image: url("/static/imagens/frutas1img.png"), url("/static/imagens/frutas1img.png");
+    background-position: top 1px left 50px, bottom 1px right 50px;
+    background-repeat: repeat-x;
+    background-size: 600px 200px; /* ajusta o tamanho de cada imagem */
+    z-index: 0;
+    filter:saturate(100%)
+}
+
+body.landing::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: inherit;   /* copia o fundo do body */
+    filter: blur(1px);     /* aplica o desfoque*/
+    z-index: -1;           /*coloca atrás do conteúdo */
+}
+
+body.login {
+    background-color: black;
+    display: flex;
+    flex-direction: column;              /* ativa flexbox */
+    justify-content: center;    /* centraliza na horizontal */
+    align-items: center;        /* centraliza na vertical */
+    height: 100vh;              /* ocupa altura total da tela */
+    margin: 0;                  /* remove margens padrão */
+    color: white;               /* deixa o texto visível no fundo preto */
+    background-image: url("/static/imagens/frutas1img.png"), url("/static/imagens/frutas1img.png");
+    background-position: top 1px left 50px, bottom 1px right 50px;
+    background-repeat: repeat-x;
+    background-size: 600px 200px; /* ajusta o tamanho de cada imagem */
+    z-index: 0;
+    filter:saturate(100%)
+}
+
+body.login::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: inherit;   /* copia o fundo do body */
+    filter: blur(1px);     /* aplica o desfoque*/
+    z-index: -1;           /*coloca atrás do conteúdo */
+}
+
+
+
+body.menu {
+    background-color: black;
+    display: flex;
+    flex-direction: column;              /* ativa flexbox */
+    justify-content: center;    /* centraliza na horizontal */
+    align-items: center;        /* centraliza na vertical */
+    height: 100vh;              /* ocupa altura total da tela */
+    margin: 0;                  /* remove margens padrão */
+    color: white;               /* deixa o texto visível no fundo preto */
+    background-image: url("/static/imagens/frutas1img.png"), url("/static/imagens/frutas1img.png");
+    background-position: top 1px left 50px, bottom 1px right 50px;
+    background-repeat: repeat-x;
+    background-size: 600px 200px; /* ajusta o tamanho de cada imagem */
+    z-index: 0;
+    filter:saturate(100%)
+}
+
+body.menu::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: inherit;   /* copia o fundo do body */
+    filter: blur(2px);     /* aplica o desfoque*/
+    z-index: -1;           /*coloca atrás do conteúdo */
+}
+
+h1 {
+    text-align: center;
+}
+
+.botaovalidar {
+    margin-top: 15px;
+    padding: 8px;
+    background-color: #11581a;
+    color: white;
+    border: none;
+    width: 300px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botaosalvar {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #11581a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px; /*largura do botão */
+    font-weight: bold;
+}
+
+
+.botaocomecar {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #11581a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px; /*largura do botão */
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;   /* empilha os filhos */
+    justify-content: center;  /* centraliza verticalmente */
+    align-items: center;      /* centraliza horizontalmente */
+    height: 100vh;            /* ocupa tela toda */
+    gap: 15px;                /* espaço entre os elementos */
+}
+
+.frutas {
+    width: 300px;
+    font-weight: bold;;
+}

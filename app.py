@@ -40,9 +40,25 @@ def get_db():
 def on_startup():
     init_db()
 
-@app.get("/")
+@app.get("/", response_class=HTMLResponse) #Redirecionamento para a tela de landing
 def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
+
+@app.get("/login") #Redirecionamento para a tela de login
+def login_get(request: Request):
+    return templates.TemplateResponse("login.html", {"request": request})
+
+@app.post("/login")
+def login_post(request: Request, username: str = Form(...)): # Redireciona para o menu, passando o nome na URL
+    from fastapi.responses import RedirectResponse
+    return RedirectResponse(url=f"/menu?username={username}", status_code=303)
+
+@app.get("/menu", response_class=HTMLResponse)
+def menu(request: Request, username: str = None):
+    if not username:
+        from fastapi.responses import RedirectResponse
+        return RedirectResponse(url="/login")
+    return templates.TemplateResponse("menu.html", {"request": request, "nome": username})
 
 @app.post("/submit")
 def submit(username: str = Form(...), fruit: str = Form(...), db: Session = Depends(get_db)):
