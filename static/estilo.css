@@ -1,18 +1,19 @@
 body.landing {
-    background-color: black;
+    background-color: white;
     display: flex;
-    flex-direction: column;              /* ativa flexbox */
-    justify-content: center;    /* centraliza na horizontal */
-    align-items: center;        /* centraliza na vertical */
-    height: 100vh;              /* ocupa altura total da tela */
-    margin: 0;                  /* remove margens padrão */
-    color: white;               /* deixa o texto visível no fundo preto */
-    background-image: url("/static/imagens/frutas1img.png"), url("/static/imagens/frutas1img.png");
-    background-position: top 1px left 50px, bottom 1px right 50px;
-    background-repeat: repeat-x;
-    background-size: 600px 200px; /* ajusta o tamanho de cada imagem */
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;        
+    height: 100vh;              
+    margin: 0;                  
+    color: black;
+
+    background-image: url("/static/imagens/feirafrutasimg.png");
+    background-position: center 5px;  /* X = centro, Y = 120px abaixo do topo */
+    background-repeat: no-repeat;
+    background-size: 1200px;
     z-index: 0;
-    filter:saturate(100%)
+    filter: saturate(100%);
 }
 
 body.landing::before {
@@ -21,24 +22,25 @@ body.landing::before {
     top: 0; left: 0; right: 0; bottom: 0;
     background: inherit;   /* copia o fundo do body */
     filter: blur(1px);     /* aplica o desfoque*/
-    z-index: -1;           /*coloca atrás do conteúdo */
+    z-index: -1;          /* coloca atrás do conteúdo */
 }
 
 body.login {
-    background-color: black;
+    background-color: white;
     display: flex;
-    flex-direction: column;              /* ativa flexbox */
-    justify-content: center;    /* centraliza na horizontal */
-    align-items: center;        /* centraliza na vertical */
-    height: 100vh;              /* ocupa altura total da tela */
-    margin: 0;                  /* remove margens padrão */
-    color: white;               /* deixa o texto visível no fundo preto */
-    background-image: url("/static/imagens/frutas1img.png"), url("/static/imagens/frutas1img.png");
-    background-position: top 1px left 50px, bottom 1px right 50px;
-    background-repeat: repeat-x;
-    background-size: 600px 200px; /* ajusta o tamanho de cada imagem */
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;        
+    height: 100vh;              
+    margin: 0;                  
+    color: black;
+
+    background-image: url("/static/imagens/feirafrutasimg.png");
+    background-position: center 5px;  /* X = centro, Y = 120px abaixo do topo */
+    background-repeat: no-repeat;
+    background-size: 1200px;
     z-index: 0;
-    filter:saturate(100%)
+    filter: saturate(100%);
 }
 
 body.login::before {
@@ -47,26 +49,27 @@ body.login::before {
     top: 0; left: 0; right: 0; bottom: 0;
     background: inherit;   /* copia o fundo do body */
     filter: blur(1px);     /* aplica o desfoque*/
-    z-index: -1;           /*coloca atrás do conteúdo */
+    z-index: -1;          /* coloca atrás do conteúdo */
 }
 
 
 
 body.menu {
-    background-color: black;
+    background-color: white;
     display: flex;
-    flex-direction: column;              /* ativa flexbox */
-    justify-content: center;    /* centraliza na horizontal */
-    align-items: center;        /* centraliza na vertical */
-    height: 100vh;              /* ocupa altura total da tela */
-    margin: 0;                  /* remove margens padrão */
-    color: white;               /* deixa o texto visível no fundo preto */
-    background-image: url("/static/imagens/frutas1img.png"), url("/static/imagens/frutas1img.png");
-    background-position: top 1px left 50px, bottom 1px right 50px;
-    background-repeat: repeat-x;
-    background-size: 600px 200px; /* ajusta o tamanho de cada imagem */
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;        
+    height: 100vh;              
+    margin: 0;                  
+    color: black;
+
+    background-image: url("/static/imagens/feirafrutasimg.png");
+    background-position: center 5px;  /* X = centro, Y = 120px abaixo do topo */
+    background-repeat: no-repeat;
+    background-size: 1200px;
     z-index: 0;
-    filter:saturate(100%)
+    filter: saturate(100%);
 }
 
 body.menu::before {
@@ -74,8 +77,8 @@ body.menu::before {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: inherit;   /* copia o fundo do body */
-    filter: blur(2px);     /* aplica o desfoque*/
-    z-index: -1;           /*coloca atrás do conteúdo */
+    filter: blur(1px);     /* aplica o desfoque*/
+    z-index: -1;          /* coloca atrás do conteúdo */
 }
 
 h1 {
