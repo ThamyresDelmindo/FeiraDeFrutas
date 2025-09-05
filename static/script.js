@@ -1,13 +1,17 @@
 function clickfuncao(){
   let select = document.querySelector(".frutas")
   let value = select.value
+  let modal = document.querySelector("#meuModal")
+  let msg = document.querySelector("#mensagem")
 
   const frutas = ["Banana", "Maçã", "Laranja", "Uva", "Morango", "Abacaxi", "Manga", "Pera", "Melancia", "Kiwi" ];
 
 
   if (value == "Ver tudo") {
-    alert("Frutas disponíveis: " + frutas.join(", "))
+    msg.textContent = frutas.join(",") //Preenchendo a mensagem
+    modal.style.display = "block" //mostra o modal
   }
+
   else if (value == "Adicionar") {
       let fruta_adicionada = prompt("Digite o nome da fruta que deseja adicionar: ")
       frutas.push(fruta_adicionada)
@@ -51,4 +55,8 @@ function clickfuncao(){
     }
   }
 
+}
+
+document.querySelector(".fechar").onclick = function () {
+  modal.style.display = "none" // fecha o modal no 'X'
 }
