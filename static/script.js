@@ -8,14 +8,22 @@ function clickfuncao(){
 
 
   if (value == "Ver tudo") {
-    msg.textContent = frutas.join(",") //Preenchendo a mensagem
+    msg.innerHTML = frutas.map(fruta => "<button>" + fruta + "</button>").join("");
     modal.style.display = "block" //mostra o modal
-  }
+  
+    let botoes = msg.querySelectorAll("button");
+    botoes.forEach(botao => {
+      botao.addEventListener("click", () => {
+    // aqui definição do que acontece quando clicla no botão da fruta
+        console.log("Você clicou em: " + botao.textContent);
+        });
+      });
+    }
 
   else if (value == "Adicionar") {
-      let fruta_adicionada = prompt("Digite o nome da fruta que deseja adicionar: ")
-      frutas.push(fruta_adicionada)
-      alert(fruta_adicionada + " foi adicionada ao Menu")
+    let fruta_adicionada = prompt("Digite o nome da fruta que deseja adicionar: ")
+    frutas.push(fruta_adicionada)
+    alert(fruta_adicionada + " foi adicionada ao Menu")
   }
       
   else if (value == "Remover") {
@@ -54,9 +62,8 @@ function clickfuncao(){
       alert(fruta_editada + "foi atualizada no Menu")
     }
   }
-
 }
-
+let modal = document.querySelector("#meuModal");
 document.querySelector(".fechar").onclick = function () {
   modal.style.display = "none" // fecha o modal no 'X'
 }

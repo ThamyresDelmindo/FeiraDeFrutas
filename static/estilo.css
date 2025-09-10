@@ -94,7 +94,6 @@ h1 {
     width: 300px;
     font-weight: bold;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 .botaosalvar {
@@ -104,7 +103,6 @@ h1 {
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     width: 300px; /*largura do botão */
     font-weight: bold;
 }
@@ -138,29 +136,37 @@ form {
 
 /* Deixa o fundo escuro */
 #meuModal {
-   position: fixed;   /* fica sobre tudo */
-   top:100; left:0;
-   width:100%; height:100%;
-   background: rgba(0,0,0,0.5); /* fundo escuro transparente */
+   position: fixed;   /* o modal fica fixo na tela, sobre tudo */
+   top:0px; left:0px; /* posição: 100 (provavelmente falta 'px') do topo e 0 da esquerda */
+   width:100%; height:100%; /* ocupa toda a largura e altura da tela */
+   background: rgba(0,0,0,0.5); /* fundo preto com transparência de 50% */
    display:none; /* começa escondido */
 }
 
 /* A caixinha central */
 #meuModal .conteudo {
    background: white;
-   margin: 10% auto;
-   padding: 200px;
-   width: 300px;
+   margin: 10% auto; /*margem superior e inferior*/
+   padding: 10px; /*espaço entre o conteúdo e a borda do elemento*/
+   width: 400px;
 }
 
+/* itens do modal, frutas */
 #mensagem {
     text-align: center;
 }
+
+/* titulo do modal MENU */
 
 h2 {
     text-align: center;
 }
 
-#fechar {
-    align-items: center;
+.fechar {
+    background: green;
+    color: azure;
+    border: none;
+    font-size: 10px;
+    font-weight: bold;
+    float: right;
 }
